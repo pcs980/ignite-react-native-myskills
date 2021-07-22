@@ -20,7 +20,10 @@ export function Home() {
   const [greeting, setGreeting] = useState('');
 
   function handleAddNewSkill() {
-    setMySkills([...mySkills, { id: newSkill, name: newSkill }]);
+    setMySkills([...mySkills, {
+      id: String(new Date().getTime()),
+      name: newSkill,
+    }]);
     setNewSkill('');
   }
 
